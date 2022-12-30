@@ -1,6 +1,5 @@
 #!/bin/bash
-# PSQL="psql -X --tuples-only salon freecodecamp -c"
-PSQL="psql -X --tuples-only salontest freecodecamp -c"
+PSQL="psql -X --tuples-only salon freecodecamp -c"
 
 echo -e "\n~~~~~ MY SALON ~~~~~"
 
