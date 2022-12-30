@@ -13,38 +13,6 @@ DISPLAY_SERVICES() {
   done
 }
 
-# BOOKING_MENU() {
-#   echo -e "\nWhat's your phone number?"
-#   read CUSTOMER_PHONE
-
-#   QUERY="SELECT customer_id,
-#     name
-#   FROM customers
-#   WHERE phone = '$CUSTOMER_PHONE';"
-#   CUSTOMER_INFO=$($PSQL "$QUERY")
-
-#   CUSTOMER_ID=$(echo $CUSTOMER_INFO | sed -E 's/\s+|\|.*//g')
-#   CUSTOMER_NAME=$(echo $CUSTOMER_INFO | sed -E 's/.*\||\s+//g')
-
-#   if [[ -z $CUSTOMER_ID ]]; then
-#     echo "\nI don't have a record for that phone number, what's your name?"
-#     read CUSTOMER_NAME
-
-#     INSERT="INSERT INTO customers (name, phone)
-#     VALUES ('$CUSTOMER_NAME', '$CUSTOMER_NUMBER');"
-#     CUSTOMER_INSERT_RESULT=$($PSQL "$INSERT")
-
-#     CUSTOMER_ID=$($PSQL "$QUERY")
-#   fi
-
-#   echo -e "\nWhat time would you like your $SERVICE, $CUSTOMER_NAME?"
-
-#   read SERVICE_TIME
-
-#   INSERT=""
-
-# }
-
 MAIN_MENU() {
   if [[ $1 ]]; then
     echo -e "\n$1"
